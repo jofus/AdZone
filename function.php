@@ -113,7 +113,7 @@ function showAdvert($idadvert)
 			 '.$row["description"].'
        </div>
 <div class="userMessage">
-			 <form action="mailer.php" method="post">
+			 <form>
 			 <h3>Message The User</h3>
 
 			 <label for="fullname">Full Name</label>
