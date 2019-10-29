@@ -207,18 +207,16 @@ function loginUser($email,$password)
 
     if( $row ){
         #echo "check!";
-        $_SESSION["id_user"] 	  =  $row["id_user"];
-        $_SESSION["username"]   =  $row["username"];
-        $_SESSION["email"] 		  =  $row["email"];
-        $_SESSION["firstname"]  =  $row["firstname"];
-        $_SESSION["lastname"]	  =  $row["lastname"];
-        $_SESSION["id_county"]  =  $row["county"];
-        $_SESSION["counties"]	  =  $row["county"];
-        $_SESSION["phone"]	    =  $row["phone"];
-
+        $_SESSION["id_user"] 	    =  $row["id_user"];
+        $_SESSION["username"]     =  $row["username"];
+        $_SESSION["email"] 		    =  $row["email"];
+        $_SESSION["firstname"]    =  $row["firstname"];
+        $_SESSION["lastname"]	    =  $row["lastname"];
+        $_SESSION["id_county"]    =  $row["county"];
+        $_SESSION["counties"]	    =  $row["county"];
+        $_SESSION["phone"]	      =  $row["phone"];
         $_SESSION["user_picture"] =  $row["user_picture"];
-
-        $_SESSION["last_login"] = $row["last_login"];
+        $_SESSION["last_login"]   = $row["last_login"];
         header("location: homepage.php");
 
     }else{
@@ -283,5 +281,3 @@ function updateUser($firstname, $lastname, $email, $phone, $user_picture, $count
    header("location: profile.php");
 
 }
-
-?>
